@@ -4,7 +4,16 @@ const { createEsbuildPlugin } = require("@badeball/cypress-cucumber-preprocessor
 const addCucumberPreprocessorPlugin = require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin;
 
 module.exports = defineConfig({
+
+  defaultCommandTimeout: 4000,
+  pageLoadTimeout: 30000,
+
+  
   e2e: {
+
+    baseUrl: 'https://automationexercise.com/products',
+    //video : true,
+    //reporter: 'reporters/custom.js',
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);
       on(

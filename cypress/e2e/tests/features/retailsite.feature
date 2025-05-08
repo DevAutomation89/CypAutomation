@@ -15,18 +15,32 @@ Feature: Retail Login
     #  When User enter a "<product>" in the search input
     #  Then searched product is visible
 
-    #  Examples:
-    #      | product |
-    #     | T-shirt |
+    # Examples:
+    #     | product |
+    #    | T-shirt |
 
+    Scenario: Search product (TC8)
 
-    Scenario: Search category (TC10)
         Given the user is on the retail portal
         When User clicks on products button
         Then User will be navigated to all products page successfully
-        Then the "<subcategory>" is visible under category
+        When User enter a "<product>" in the search input
+        Then searched product is visible
+        And User click on the add to cart button
+        Then the item is added to the cart
+
         Examples:
-            | subcategory |
-            | Women       |
-            | Men         |
-            | Kids        |
+            | product |
+            | T-shirt |
+
+
+# Scenario: Search category (TC10)
+#    Given the user is on the retail portal
+#    When User clicks on products button
+#   Then User will be navigated to all products page successfully
+#   Then the "<subcategory>" is visible under category
+#   Examples:
+#       | subcategory |
+#       | Women       |
+#       | Men         |
+#       | Kids        |

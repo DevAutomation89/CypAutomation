@@ -6,7 +6,7 @@
   "scripts": {
     "cypress:open": "cypress open",
     "test": "cypress run \"**/*.feature\" --browser chrome --headed",
-    "test headless": "cypress run \"**/*.feature\" --browser chrome"
+    "test headless": "cypress run \"**/*.feature\" --browser chrome --headless"
   },
   "author": "Menuka",
   "license": "ISC",

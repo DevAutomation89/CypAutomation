@@ -7,7 +7,13 @@ module.exports = defineConfig({
 
   defaultCommandTimeout: 4000,
   pageLoadTimeout: 30000,
-
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/reports/mochawesome',
+    overwrite: false,
+    html: false,
+    json: true,
+  },
   
   e2e: {
 

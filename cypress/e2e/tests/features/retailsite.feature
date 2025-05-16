@@ -29,9 +29,15 @@ Feature: Retail Login
         And User click on the add to cart button
         Then the item is added to the cart
 
+
         Examples:
             | product |
             | T-shirt |
+
+
+
+
+
 
 
 # Scenario: Search category (TC10)

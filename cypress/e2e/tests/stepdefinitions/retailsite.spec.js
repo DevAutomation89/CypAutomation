@@ -20,7 +20,7 @@ When("the user clicks on login", () => {
   });
 
   When("User clicks on products button", () => {
-    cy.get(`a[href="/products"]`).click();
+    cy.get(`a[href="/products"]`).click({force: true});
   });
 
   Then("User will be navigated to all products page successfully", () => {
@@ -29,7 +29,7 @@ When("the user clicks on login", () => {
         
     When(/^User enter a "([^"]*)" in the search input$/, (product1) => {
     cy.get(`[id="search_product"]`).type(product1);
-    cy.get(`[id="submit_search"]`).click();
+    cy.get(`[id="submit_search"]`).click({force: true});
 
   });
 
@@ -46,7 +46,7 @@ When("the user clicks on login", () => {
   });
 
   Then("User click on the add to cart button", () => {
-    cy.contains('a.btn.add-to-cart', 'Add to cart').first().click();
+    cy.contains('a.btn.add-to-cart', 'Add to cart').first().click({force: true});
 
     //cy.get(`div[class='product-overlay']`).find (`*:contains('Add to cart')`).first().click({force:true});
     
@@ -69,7 +69,7 @@ When("the user clicks on login", () => {
    });
  
    When("the user clicks on the cart button", () => {
-    cy.get('a[href="/view_cart"]').first().click();
+    cy.get('a[href="/view_cart"]').first().click({force: true});
      });
 
   

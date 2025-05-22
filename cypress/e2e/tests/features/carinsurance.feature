@@ -7,18 +7,25 @@ Feature: Car insurance
   #And the user clicks the create button
   #Then the user should be redirected to the Login page
 
+  @TC
+  Scenario Outline:  login with registered user
 
-  # Scenario: login with registered user
-  # Given the user is on the login page
-  # When the user enters valid "emmenuka@gmail.com" and "Menu@9250"
-  # Then the user successfully logged in and landing on the home page
+    Given the user is on the login page
+    When the user enters valid "<username>" and "<password>"
+    Then the user has "<outcome>" for "<condition>"
+
+    Examples:
+      | username           | password  | outcome                                       | condition |
+      | emmenuka@gmail.com | Menu@9250 | Broker Insurance WebPage                      | Positive  |
+      | emmenuka@gmail.com | Menu@9251 | Enter your Email address and password correct | Negative  |
+
 
   # Scenario: logout with registered user
   #Given the user is on the home page
   # When the user clicked on logout button
   #Then the user successfully logged out and landed to login page
 
-
+  @priority1
   Scenario Outline: User requests a car insurance quotation with a breakdown cover
     Given the user is on the login page
     When the user enters valid "emmenuka@gmail.com" and "Menu@9250"
@@ -31,6 +38,9 @@ Feature: Car insurance
       | cover    | parkingLocation  |
       | No cover | Public Place     |
       | Roadside | Private Property |
+
+
+
 # | At home  |
 # | European |
 

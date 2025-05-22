@@ -8,8 +8,8 @@ clickRegistration(){
     cy.get(`a[href="register.php"]`).click();
 }
 
-loginEmailAndPwd(email, password){
-    cy.get(`[id="email"]`).type(email),
+loginEmailAndPwd(username, password){
+    cy.get(`[id="email"]`).type(username),
     cy.get(`[id="password"]`).type(password),
     cy.get(`input[name="submit"]`).click();
 }

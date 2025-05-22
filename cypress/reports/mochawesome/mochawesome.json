@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 2,
+    "failures": -1,
+    "start": "2025-05-22T11:26:43.330Z",
+    "end": "2025-05-22T11:26:43.501Z",
+    "duration": 171,
+    "testsRegistered": 2,
+    "passPercent": null,
+    "pendingPercent": 100,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33350641-a067-4831-a81a-3967797768d8",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/features/carinsurance.feature",
+      "file": "cypress/e2e/tests/features/carinsurance.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b6775fb3-39c3-4555-a7de-8550673ebfb7",
+          "title": "Car insurance",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User requests a car insurance quotation with a breakdown cover (example #1)",
+              "fullTitle": "Car insurance User requests a car insurance quotation with a breakdown cover (example #1)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "704f39b3-aec2-4e9d-92b4-be7fa58de484",
+              "parentUUID": "b6775fb3-39c3-4555-a7de-8550673ebfb7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User requests a car insurance quotation with a breakdown cover (example #2)",
+              "fullTitle": "Car insurance User requests a car insurance quotation with a breakdown cover (example #2)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "8ee3891c-fff1-4a5c-9941-7de713da82ad",
+              "parentUUID": "b6775fb3-39c3-4555-a7de-8550673ebfb7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "704f39b3-aec2-4e9d-92b4-be7fa58de484",
+            "8ee3891c-fff1-4a5c-9941-7de713da82ad"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

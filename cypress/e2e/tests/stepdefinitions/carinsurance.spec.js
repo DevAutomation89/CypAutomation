@@ -53,14 +53,36 @@ Given("the user is on the login page", () => {
     login.visit('https://demo.guru99.com/insurance/v1/index.php');
     
 });
+   
 
-When("the user enters valid {string} and {string}", (email, password) => {
-   login.loginEmailAndPwd(email, password);   
+When("the user enters valid {string} and {string}", (username, password) => {
+  login.loginEmailAndPwd(username, password);   
 });
 
-Then("the user successfully logged in and landing on the home page", () => {
-    home.validateHomePage();
+Then("the user has {string} for {string}", (outcome, condition) => {
+  switch (condition.toLowerCase()){
+    case 'positive':
+      cy.contains('h2', 'Broker Insurance WebPage');
+      break; 
+    case 'negative':
+      cy.contains('b', 'Enter your Email address and password correct');
+      break;
+      default:
+        break;
+  }
+
+    //home.validateHomePage();
  });
+/** 
+ Then(`in '{}' section, '{}' is displayed`, (section: string, text: string) => {
+  switch (section.toLowerCase()) {
+    case 'current plans':
+      cy.get(`h2:contains('${section}')`).parent(`div`).parent(`div`).contains(text).should('be.visible');
+      break;
+    default:
+      throw new Error(section + ' section is not defined');
+  }
+});*/
 
  Given("the user is on the home page", () => {
   login.visit('https://demo.guru99.com/insurance/v1/header.php')

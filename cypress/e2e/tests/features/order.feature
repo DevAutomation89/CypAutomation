@@ -18,6 +18,7 @@ Feature: Retail Order
     #      | T-Shirt  |
     #      | Dress    |
 
+    @priority1 @regression
     Scenario:  add two products to cart
 
         Given the user is on the retail portal

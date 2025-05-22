@@ -24,3 +24,33 @@ jobs:
 
     - name: Run tests
       run: npx cypress run "**/*.feature" --browser chrome
+
+#shedule and run
+
+
+File: .github/workflows/scheduled-tests.yml
+name: Scheduled Tests
+
+on:
+  schedule:
+    - cron: '0 10 * * *'  # Runs every day at 8:15 AM UTC
+  workflow_dispatch:       # Optional: allows manual trigger from GitHub UI
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js (or Python, etc.)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
